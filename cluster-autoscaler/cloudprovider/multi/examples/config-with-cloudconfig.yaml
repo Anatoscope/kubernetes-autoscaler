@@ -1,0 +1,4 @@
+providers:
+  - name: gce
+    cloud-config: gce.conf
+  - name: aws
