@@ -107,7 +107,7 @@ func (multi *MultiCloudProvider) HasInstance(node *apiv1.Node) (bool, error) {
 		if err == nil {
 			hasInstance = hasInstance || providerHasInstance
 		}
-		errors.Join(allErr, err)
+		allErr = errors.Join(allErr, err)
 	}
 	return hasInstance, allErr
 }
